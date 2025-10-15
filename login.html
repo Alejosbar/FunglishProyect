@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Registro - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/isologo off.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" id="main-nav">
+                        <!-- El script auth.js llenará esto -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content pt-5">
+        <section class="login-register-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-panel" type="button" role="tab" aria-controls="login-panel" aria-selected="true">Iniciar Sesión</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-panel" type="button" role="tab" aria-controls="register-panel" aria-selected="false">Registrarse</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content card p-4" id="authTabsContent">
+                            <!-- Panel de Iniciar Sesión -->
+                            <div class="tab-pane fade show active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+                                <h3 class="mb-4">Iniciar Sesión</h3>
+                                <form id="loginForm">
+                                    <div class="mb-3">
+                                        <label for="loginEmail" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="loginEmail" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginPassword" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="loginPassword" required>
+                                    </div>
+                                    <div id="loginError" class="alert alert-danger d-none"></div>
+                                    <button type="submit" class="btn btn-primary">Entrar</button>
+                                </form>
+                            </div>
+                            <!-- Panel de Registro -->
+                            <div class="tab-pane fade" id="register-panel" role="tabpanel" aria-labelledby="register-tab">
+                                <h3 class="mb-4">Crear una Cuenta</h3>
+                                <form id="registerForm">
+                                    <div class="mb-3">
+                                        <label for="registerName" class="form-label">Nombre del Padre/Madre</label>
+                                        <input type="text" class="form-control" id="registerName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerEmail" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="registerEmail" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerPassword" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="registerPassword" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerParentPassword" class="form-label">Contraseña para Acceso de Padres (código numérico)</label>
+                                        <input type="password" inputmode="numeric" pattern="[0-9]*" class="form-control" id="registerParentPassword" required>
+                                        <div class="form-text">Este será el código que usarás para entrar al panel de padres.</div>
+                                    </div>
+                                    <div id="registerError" class="alert alert-danger d-none"></div>
+                                    <div id="registerSuccess" class="alert alert-success d-none"></div>
+                                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <!-- Modal de Verificación de Código -->
+    <div class="modal fade" id="verificationModal" tabindex="-1" aria-labelledby="verificationModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="verificationModalLabel">Verificar Identidad</h5>
+                    <!-- No hay botón de cierre para forzar la verificación -->
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Se ha generado un código de verificación. En una aplicación real, este código se enviaría a tu correo electrónico.
+                        <br><br>
+                        <strong>Para fines de prueba, puedes ver este código en el "Panel de Padres".</strong></p>
+                    <form id="verificationForm">
+                        <div class="mb-3">
+                            <label for="verificationCode" class="form-label">Código de Verificación</label>
+                            <input type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" class="form-control" id="verificationCode" required>
+                        </div>
+                        <div id="verificationError" class="alert alert-danger d-none"></div>
+                        <button type="submit" class="btn btn-primary">Verificar y Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

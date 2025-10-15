@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">    
+    <link rel="icon" href="../img/isologo off.png" type="image/png">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="../img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../estudiantes.html">Estudiantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../progresos.html">Progresos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-5 juegos-main">
+        <section class="games-intro py-5 bg-light text-center">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-4">
+                        <li class="breadcrumb-item"><a href="../estudiantes.html">Estudiantes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Juegos</li>
+                    </ol>
+                </nav>
+                <h1 style="color: #255790;" class="mb-4 d-flex align-items-center justify-content-center">
+                    ¡Juguemos y Aprendamos!
+                    <span class="play-icon-animation ms-3">▶️</span>
+                </h1>
+                <p class="lead">Elige un juego para practicar inglés de forma divertida</p>
+                <div class="creative-icons mt-3">
+                    <span class="icon-bounce">🎮</span>
+                    <span class="icon-bounce" style="animation-delay: 0.1s;">🧠</span>
+                    <span class="icon-bounce" style="animation-delay: 0.2s;">✨</span>
+                    <span class="icon-bounce" style="animation-delay: 0.3s;">📚</span>
+                    <span class="icon-bounce" style="animation-delay: 0.4s;">🏆</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-list py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card game-card h-100">
+                            <div class="card-body text-center align-items-center">
+                                <span class="game-icon">❓</span>
+                                <h5 class="card-title">Quizzes Interactivos</h5>
+                                <p class="card-text">Responde preguntas con imágenes y opciones múltiples</p>
+                                <button class="btn btn-primary" style="width: 70%;" id="startQuiz">Jugar Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card game-card h-100">
+                            <div class="card-body text-center align-items-center">
+                                <span class="game-icon">🧠</span>
+                                <h5 class="card-title">Juego de Memoria</h5>
+                                <p class="card-text">Encuentra los pares de tarjetas con palabras</p>
+                                <button class="btn btn-primary" style="width: 70%;" id="startMemory">Jugar Memoria</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card game-card h-100">
+                            <div class="card-body text-center align-items-center">
+                                <span class="game-icon">🎯</span>
+                                <h5 class="card-title">Drag & Drop</h5>
+                                <p class="card-text">Arrastra objetos a los lugares correctos</p>
+                                <button class="btn btn-primary" style="width: 70%;" id="startDragDrop">Jugar Drag & Drop</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card game-card h-100">
+                            <div class="card-body text-center align-items-center">
+                                <span class="game-icon">👨‍👩‍👧</span>
+                                <h5 class="card-title">Family Game</h5>
+                                <p class="card-text">Aprende los miembros de la familia</p>
+                                <button class="btn btn-primary" style="width: 70%;" id="startFamilyGame">Jugar Family Game</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card game-card h-100">
+                            <div class="card-body text-center align-items-center">
+                                <span class="game-icon">🎵</span>
+                                <h5 class="card-title">Simón Dice</h5>
+                                <p class="card-text">Sigue la secuencia de colores.</p>
+                                <button class="btn btn-primary" style="width: 70%;" id="startSimonDice">Jugar Simón Dice</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Game Section -->
+        <section class="game-section d-none py-5" id="quizSection">
+            <div class="container">
+                <h2 style="color: #99BCD3;" class="text-center mb-4">Quiz</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="quizQuestion" class="d-flex flex-column align-items-center">
+                                        <img id="quizImage" src="" alt="Pregunta del quiz" class="img-fluid mb-3" loading="lazy">
+                                        <h5 id="questionText" class="quiz-question-text text-center"></h5>
+                                    </div>
+                                    <div id="quizOptions" class="row">
+                                        <!-- Options will be populated by JS -->
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button class="btn btn-secondary" id="nextQuestion" style="display:none;">Siguiente</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p>Puntuación: <span id="quizScore">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Memory Game Section -->
+        <section class="game-section d-none py-5" id="memorySection">
+            <div class="container">
+                <h2 class="text-center mb-4">Juego de Memoria</h2>
+                <div class="row justify-content-center">                    <div class="col-md-10">
+                        <div id="memoryBoard" class="memory-board">
+                            <!-- Cards will be populated by JS -->
+                        </div>
+                        <div class="text-center mt-3">
+                            <p>Intentos: <span id="memoryAttempts">0</span></p>
+                            <p>Pares encontrados: <span id="memoryPairs">0</span></p>
+                            <button class="btn btn-secondary" id="resetMemory">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drag & Drop Game Section -->
+        <section class="game-section d-none py-5" id="dragDropSection">
+            <div class="container">
+                <h2 class="text-center mb-4">Drag & Drop</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div id="dragDropFeedback">
+                            <div class="container-fluid">
+                                <div class="drag-drop-container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5>Arrastra los objetos:</h5>
+                                            <div id="dragItems" class="drag-items-container">
+                                                <!-- Draggable items will be populated by JS -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Categorías a completar:</h5>
+                                            <div id="dropZones" class="drop-zones-container">
+                                                <!-- Drop zones will be populated by JS -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <p>Correctos: <span id="dragCorrect">0</span></p>
+                            <button class="btn btn-secondary" id="resetDragDrop">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Game Section -->
+        <section class="game-section d-none py-5" id="familyGameSection">
+            <div class="container text-center">
+                <h2 style="color: #66C2B8;" class="mb-4">👨‍👩‍👧 Family Game</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div id="familyGameContent">
+                            <div class="family-question" id="familyQuestion"></div>
+                            <div class="family-options" id="familyOptions">
+                                <!-- Opciones del juego de familia -->
+                            </div>
+                            <div id="familyResult" class="family-result"></div>
+                            <div id="familyScore" class="family-score">Score: 0</div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-secondary" id="resetFamilyGame">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simon Dice Game Section -->
+        <section class="game-section d-none py-5" id="simondicesection">
+            <div class="container text-center">
+                <h2 style="color: #F0C834;" class="mb-4">🎵 Simón Dice 🎵</h2>
+                <div id="simon-game-board">
+                    <div class="simon-btn" id="green"></div>
+                    <div class="simon-btn" id="red"></div>
+                    <div class="simon-btn" id="yellow"></div>
+                    <div class="simon-btn" id="blue"></div>
+                </div>
+                <button id="startSimon" class="btn btn-secondary mt-4">Iniciar Juego</button>
+                <p class="mt-3">Nivel: <span id="simonLevel">0</span></p>
+                <p id="simonInstruction" class="mt-2">Presiona "Iniciar Juego" para comenzar.</p>
+            </div>
+        </section>
+
+
+
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3"> 
+                    <p style="font-size: 1.5rem;">
+                        <strong>
+                            “<span style="color: var(--color-claro);">Little</span>
+                            <span style="color: #CFF0E6;">minds,</span>
+                            <span style="color: var(--color-acento);">big</span>
+                            <span style="color: #A0B2E8;">fun</span>
+                            <span style="color: #FADAB4;">finds”</span>
+                        </strong>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <!-- Este h5 estaba vacío, se puede eliminar o rellenar si se necesita un título aquí -->
+                    <!-- <h5>Enlaces Útiles</h5> -->
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 1. Añadimos la librería para la animación de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/quizzes.js"></script>
+    <script src="../js/memory.js"></script>
+    <script src="../js/dragdrop.js"></script>
+    <script src="../js/family.js"></script>
+    <script src="../js/simondice.js"></script>
+</body>
+</html>

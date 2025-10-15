@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Padres - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/isologo off.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" id="main-nav">
+                        <!-- El script auth.js llenará esto dinámicamente -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content pt-5">
+        <section class="parent-panel py-5 bg-light" id="parentPanel">
+            <div class="container">
+                <h2 class="text-center mb-4">Panel de Padres</h2>
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Información de la Suscripción</h5>
+                            </div>
+                            <div class="card-body" id="subscriptionInfo">
+                                <!-- La información de la suscripción se cargará aquí -->
+                                <p><strong>Tipo de Plan:</strong> <span id="planType">Cargando...</span></p>
+                                <p><strong>Fecha de Vencimiento:</strong> <span id="expirationDate">Cargando...</span></p>
+                                <a href="servicios.html" class="btn btn-primary btn-sm">Administrar Suscripción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Estadísticas Detalladas</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="progressChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Tabla de Progresos</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Completado</th>
+                                            <th>Puntuación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="progressTable">
+                                        <!-- Dynamic content will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta para mostrar el último código de verificación -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="bi bi-key-fill"></i> Último Código de Verificación</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="card-text">Para pruebas, el último código generado es:</p>
+                                <h3 class="display-4" id="lastVerificationCode">----</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECCIÓN DE DEPURACIÓN PARA VER USUARIOS -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="card border-warning">
+                            <div class="card-header bg-warning">
+                                <h5 class="text-dark"><i class="bi bi-tools"></i> Panel de Depuración (Solo para Desarrollo)</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">A continuación se muestran todos los usuarios registrados para facilitar las pruebas. <strong>Esta sección no debe existir en una aplicación real.</strong></p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Email</th>
+                                                <th>Contraseña</th>
+                                                <th>Código de Padres</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="userListTable">
+                                            <!-- Los usuarios se cargarán aquí -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="progresos.html" class="btn btn-secondary">Volver a Progresos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p style="font-size: 1.5rem;"><strong>“<span style="color: var(--color-claro);">Little</span> <span style="color: #CFF0E6;">minds,</span> <span style="color: var(--color-acento);">big</span> <span style="color: #A0B2E8;">fun</span> <span style="color: #FADAB4;">finds”</span></strong></p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/panel-padres.js"></script>
+</body>
+</html>

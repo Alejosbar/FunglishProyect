@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNGLISH BASE - Aprendizaje de Inglés Divertido para Niños</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/isologo off.png" type="image/png">
+    <meta name="description" content="FUNGLISH: Aprendizaje de inglés divertido y accesible para niños de 3 a 5 años. Incluye juegos, cuentos y guías educativas.">
+    <meta name="keywords" content="aprendizaje inglés niños, juegos educativos, cuentos interactivos, flashcards">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" id="main-nav"><!-- El script auth.js llenará esto dinámicamente --></ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero text-center py-5" role="banner">
+            <div class="container">
+                <h1 style="color: #255790;" class="display-4 mb-4">Bienvenido a FUNGLISH </h1>
+                <p class="lead mb-4">Aprendizaje de inglés divertido y accesible para niños de 3 a 5 años</p>
+                <img src="img/logo oficial.jpg" alt="Niños diversos aprendiendo inglés" class="img-fluid mb-4 hero-image" loading="lazy">
+                <a href="servicios.html" class="btn btn-primary btn-lg btn-hero-black-text" role="button">¡Comienza Esta Gran Aventura!</a>
+            </div>
+        </section>
+
+        <section class="mission-vision py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body text-center">
+                                <i class="bi bi-bullseye mission-vision-icon mb-3"></i>
+                                <h2 class="card-title h4">Misión</h2>
+                                <p class="card-text">Fortalecer las habilidades lingüísticas en inglés de niños entre 3 y 5 años mediante experiencias lúdicas y pedagógicas diseñadas especialmente para su etapa de desarrollo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-md-6 mb-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body text-center">
+                                <i class="bi bi-eye-fill mission-vision-icon mb-3"></i>
+                                <h2 class="card-title h4">Visión</h2>
+                                <p class="card-text">En el 2028, en Funglish aspiramos a ser una plataforma web que impulse la forma de aprendizaje de inglés en niños de 3 a 5 años, convirtiéndonos en líderes de aprendizaje temprano del inglés, reconocida por crear experiencias inigualables y divertidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">Descubre la Familia Funglish</h2>
+                <div class="video-container ratio ratio-16x9">
+                    <video id="groupVideo" autoplay loop muted playsinline preload="metadata" title="Video introductorio de FUNGLISH">
+                        <source src="img/Video Introductorio.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                    <div id="videoMuteIcon" class="video-mute-icon">
+                        <i class="bi bi-volume-mute-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Blog Educativo</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/Hogar.jpg" class="card-img-top" alt="Consejos para el hogar" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">Consejos para el Hogar</h5>
+                                <p class="card-text">Actividades diarias para reforzar el aprendizaje de inglés en casa.</p>
+                                <a href="consejos-hogar.html" style="background-color: #A8D8EA;" class="btn btn-secondary"> <strong>Leer más</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/Actividades diarias.jpg" class="card-img-top" alt="Actividades diarias" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">Actividades Diarias</h5>
+                                <p class="card-text">Ideas creativas para integrar el inglés en la rutina diaria de tu hijo.</p>
+                                <a href="actividades-diarias.html" style="background-color: #A8D8EA;" class="btn btn-secondary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/Desarrollo infantil.jpg" class="card-img-top" alt="Desarrollo infantil" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">Desarrollo Infantil</h5>
+                                <p class="card-text">Cómo el aprendizaje temprano de idiomas beneficia el desarrollo cognitivo.</p>
+                                <a href="desarrollo-infantil.html" style="background-color: #A8D8EA;" class="btn btn-secondary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button style="background-color: #A8D8EA; color: rgb(255, 255, 255);" class="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                ¿Es FUNGLISH gratuito?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Ofrecemos una versión básica gratuita con acceso limitado. Para contenido completo, consulta nuestros planes en Servicios.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button style="background-color: #A8D8EA; color: rgb(255, 255, 255);" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                ¿Cómo funciona el aprendizaje?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Utilizamos juegos interactivos, cuentos animados y flashcards para hacer el aprendizaje divertido y efectivo. Buscando potenciar las habilidades de nuestros estudiantes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust py-5 bg-primary text-white text-center">
+            <div class="container">
+                <p class="mb-0" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> <strong>Toda la información que compartas con nosotros es confidencial y solo será usada para ayudarte en el aprendizaje de tu hijo. Cumplimos con la Ley de Protección de Datos.</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p style="font-size: 1.5rem;">
+                        <strong>
+                            “<span style="color: var(--color-claro);">Little</span>
+                            <span style="color: #CFF0E6;">minds,</span>
+                            <span style="color: var(--color-acento);">big</span>
+                            <span style="color: #A0B2E8;">fun</span>
+                            <span style="color: #FADAB4;">finds”</span></strong>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" >Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

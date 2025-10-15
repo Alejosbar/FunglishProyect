@@ -1,0 +1,866 @@
+/* Custom CSS Variables */
+:root {
+  --color-primario: #ffb9a3; /* Durazno Pastel (Acento 2) */
+  --color-secundario: #B8E0D2; /* Verde Menta Suave (Acento 3) */
+  --color-acento: #A8D8EA; /* Celeste Pastel (Acento 1) */
+  --color-suave: #F7F3E9; /* Beige muy claro (Fondo) */
+  --color-texto: #333333; /* Gris oscuro para texto */
+  --color-claro: #FFFFFF; /* Blanco */
+  --color-gris-claro: #F8F9FA;
+  --color-gris-oscuro: #e0e0e0; /* Un gris más oscuro para mejor contraste */
+}
+
+/* Asegurar que no haya desbordamiento horizontal */
+html {
+  overflow-x: hidden;
+}
+
+/* Global Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: var(--color-suave); /* Fondo principal */
+  color: var(--color-texto);
+  line-height: 1.6;  
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+  /* Evita la selección de texto y el cursor parpadeante al hacer clic */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Sintaxis estándar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka One', cursive;
+  font-weight: 700;
+  letter-spacing: 1px; /* Pequeño ajuste para mejorar la legibilidad */
+  color: var(--color-texto);
+}
+
+/* Clase para colores de marca específicos */
+.text-brand-dark {
+  color: #255790 !important; /* Color específico de tu H1 */
+}
+
+.btn-primary {
+  background-color: var(--color-secundario);
+  border-color: var(--color-secundario);
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #05514c; /* Un tono más oscuro del secundario */
+  border-color: #103330;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: var(--color-primario);
+  border-color: var(--color-acento);
+  color: var(--color-texto);
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #e59c86; /* Un tono más oscuro del primario */
+  border-color: #e59c86;
+  transform: scale(1.05);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--color-primario);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-claro) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-claro) !important;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-acento) !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-primario); /* Usar un color más vivo para el footer */
+  color: var(--color-claro);
+  padding: 2rem 0;
+  margin-top: auto; /* Empuja el footer al final */
+}
+
+.footer a, footer a {
+  color: var(--color-claro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px 0 20px;
+  line-height: 1.4;
+}
+
+.footer-social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.footer a:hover, footer a:hover {
+  color: var(--color-acento);
+
+}
+
+.footer-container {
+  max-width: 900x; /* Limita el ancho del contenido del footer en pantallas grandes */
+  max-width: 900px; /* Limita el ancho del contenido del footer en pantallas grandes */
+}
+
+/* Cards and Interactive Elements */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  overflow: hidden; /* Asegura que el contenido interno respete los bordes redondeados */
+  color: var(--color-texto);
+}
+
+.mission-vision .card-title {
+  color: var(--color-acento);
+}
+
+.mission-vision-icon {
+  font-size: 3rem; /* Tamaño del ícono */
+  color: var(--color-acento); /* Color celeste pastel */
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px #f9d5a795;
+}
+
+.card-header {
+  background-color: var(--color-acento) ;
+  color: var(--color-texto);
+  border-radius: 60px 60px 0 0 !important;
+  font-weight: 600;
+}
+
+.card-body1 {
+    background-color: var(--color-claro);
+  padding: 2rem 1rem; /* Ajustamos el padding para un mejor espaciado */
+    border-radius: 25px; /* Hacemos que el radio coincida con su contenedor */
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    flex-direction: column; /* Alineamos los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido verticalmente */
+    flex-grow: 1; /* Hacemos que este elemento crezca para llenar el espacio */
+}
+
+
+
+.card-body {
+  background-color: var(--color-claro); /* Un melocotón muy claro para unificar */
+}
+
+.card-img-top {
+  border-radius: 30px 30px 0 0;
+  height: 180px;
+  object-fit: cover;
+}
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: var(--color-secundario);
+}
+
+/* Forms */
+.form-control {
+  border-radius: 60px;
+  border: 2px solid var(--color-suave);
+  transition: border-color 0.3s ease;
+}
+/* Permite la selección en campos de entrada y áreas de texto */
+.form-control, textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+.form-control:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 0.2rem rgba(168, 216, 234, 0.3); /* Sombra con el color de acento */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .btn {
+    
+    margin-bottom: 10px;
+  }
+  .card {
+    margin: 10px;
+  }
+}
+
+/* Accessibility */
+.btn:focus, .form-control:focus, .nav-link:focus {
+  outline: 2px solid var(--color-primario); /* O un color de acento */
+  outline-offset: 2px;
+}
+
+/* Custom Classes for Specific Elements */
+.age-button {
+  background-color: var(--color-acento);
+  color: var(--color-texto);
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  line-height: 100px;
+}
+
+.age-button:hover {
+  background-color: var(--color-primario);
+  color: var(--color-claro);
+  transform: scale(1.1);
+}
+
+.activity-button {
+  background-color: var(--color-secundario); /* Usamos el secundario para diferenciar */
+  color: var(--color-claro);
+  border: none;
+  border-radius: 15px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.activity-button:hover {
+  background-color: var(--color-primario);
+  color: var(--color-claro);
+  transform: scale(1.05);
+}
+
+.btn-age-wrapper {
+  background: none;
+  border: #ffffff;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: inherit;
+}
+
+.reward {
+  color: var(--color-acento);
+  font-size: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Main content flex grow */
+.main-content {
+  flex: 1;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-brand .brand-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    color: var(--color-claro);
+}
+
+main {
+    padding-top: 80px; /* Adjust for fixed navbar */
+    flex: 1;
+}
+
+.hero {
+    background: var(--color-acento);
+}
+
+.hero h1 {
+    color: var(--color-texto);
+}
+
+.hero .btn-primary {
+    background-color: var(--color-claro);
+    border-color: var(--color-claro);
+    color: var(--color-primario);
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--color-suave);
+    border-color: var(--color-suave);
+}
+
+.hero .btn-primary.btn-hero-black-text {
+  color: black !important; /* Asegura que el texto sea negro */
+}
+
+/* Estilo para la sección "¿Qué es Funglish?" */
+.what-is {
+    background-color: var(--color-suave);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--color-claro);
+    background-color: var(--color-primario);
+}
+
+.bg-primary {
+    background-color: var(--color-primario) !important;
+}
+
+.benefit-icon, .contact-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* Color de fondo para la sección principal de juegos */
+.juegos-main {
+    background-color: var(--color-suave); /* Un melocotón muy claro para contraste */
+}
+
+.bg-light {
+    background-color: var(--color-suave) !important; /* Un melocotón muy claro para contraste */
+}
+
+.hero-image {
+    max-width: 300px; /* Define el ancho máximo que quieres para la imagen */
+    width: 100%; /* Mantiene la responsividad */
+    border-radius: 15px; /* Opcional: para que tenga bordes redondeados como tus tarjetas */
+    display: block; /* Asegura que la imagen sea un bloque */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+}
+
+
+
+.age-card .card-body {
+    background-color: var(--color-claro); /* Verde Menta */
+    color: var(--color-texto); /* Texto blanco para mejor contraste */
+}
+
+/* Estilo específico para las tarjetas de selección de actividad */
+.activity-card .card-body {
+    transition: transform 0.2s ease-in-out;
+}
+
+.activity-card:hover {
+    /* Aplicamos el movimiento hacia arriba y anulamos la sombra roja de la regla .card:hover */
+    transform: translateY(-5px);
+    box-shadow: none; /* ¡CORRECCIÓN! Esto anula la sombra roja de la tarjeta base. */
+}
+
+.activity-card:hover .card-body {
+    transform: scale(1.05); /* Mantenemos el zoom */
+    box-shadow: 0 6px 20px rgba(168, 216, 234, 0.5); 
+    filter: brightness(1.05); /* Aumenta ligeramente el brillo del color de fondo */
+}
+
+.activity-card.juegos .card-body { background-color: var(--color-acento); } /* Celeste */
+.activity-card.guias .card-body { background-color: var(--color-acento); } /* Celeste */
+.activity-card.cuentos .card-body { background-color: var(--color-acento); } /* Celeste */
+.activity-card.flashcards .card-body { background-color: var(--color-acento); } /* Celeste */
+
+.activity-card .card-title, .activity-card .card-text {
+    color: var(--color-texto);
+}
+
+/* Game-specific styles */
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Por defecto para 3 años (12 cartas -> 4x3) */
+    gap: 10px;
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+.age-4 #memoryBoard {
+    grid-template-columns: repeat(5, 1fr); 
+    width: 100%; 
+}
+
+/* Se añade una clase específica para la edad de 5 años */
+.age-5 #memoryBoard {
+    grid-template-columns: repeat(4, 1fr); 
+    width: 90%; 
+}
+
+
+.memory-card, .drag-item {
+    border: 2px solid var(--color-suave);
+    border-radius: 10px;
+}
+
+.drag-item { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Aumentar tamaño */
+    height: 80px; /* Aumentar tamaño */
+    margin: 10px; /* Aumentar margen */
+    font-size: 3rem; /* Aumentar tamaño de emoji */
+    color: var(--color-texto); /* Cambiar a color de texto principal */
+    cursor: grab;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: transparent; /* Sin fondo de color */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+}
+
+.drag-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.drag-item.dragging {
+    cursor: grabbing;
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+/* Estilos para los contenedores del juego Drag & Drop */
+.drag-items-container, .drop-zones-container {
+    background-color: var(--color-claro);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 150px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Apilar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.drop-zone {
+    border: 3px dashed var(--color-gris-oscuro);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 100px;
+    width: 100%;
+}
+
+.drop-zone.hover {
+    background-color: #e2f0d3; /* Un verde muy claro */
+    border-color: var(--color-secundario);
+    border-style: solid;
+    transform: scale(1.02);
+}
+
+.drop-zone.correct {
+    background-color: #d4edda; /* Verde éxito */
+    border-color: #c3e6cb;
+    border-style: solid;
+}
+
+/* Nueva clase personalizada para los botones de opciones del quiz */
+.btn-quiz-option {
+  background-color: var(--color-acento);
+  border-color: #97c6d8; /* Un borde ligeramente más oscuro para definición */
+  color: var(--color-texto);
+  border-radius: 15px; /* Un radio diferente para distinguirlos */
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-quiz-option:hover {
+  background-color: #97c6d8; /* Tono más oscuro de --color-acento */
+  border-color: #86b2c3;
+  transform: scale(1.03); /* Una animación de hover sutil */
+}
+
+/* Estilo personalizado para el texto de la pregunta del quiz */
+.quiz-question-text {
+    font-size: 1.8rem; /* Hacemos el texto más grande */
+    color: var(--color-texto); /* Un color de texto oscuro para buena legibilidad */
+    font-weight: bold;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 25px; /* Más espacio antes de las opciones */
+    
+    border-radius: 5px;
+    
+}
+
+/* Animación para el texto de la pregunta del quiz */
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-question {
+    animation: drop-in 0.6s ease-out forwards;
+}
+
+/* Estilos para la imagen del quiz */
+#quizImage {
+    max-width: 350px; /* Aumentamos el tamaño máximo */
+    width: 100%; /* Hacemos que ocupe el ancho disponible hasta el máximo */
+    height: auto; /* La altura se ajusta automáticamente */
+    max-height: 300px; /* Evitamos que sea demasiado alta en pantallas estrechas */
+    object-fit: contain; /* Asegura que la imagen se vea completa sin distorsionarse */
+    margin-bottom: 1.5rem; /* Un poco más de espacio inferior */
+}
+
+/* Estilos para el Family Game */
+.family-question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.family-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.family-card {
+    background: #fff;
+    border: 3px solid var(--color-acento);
+    border-radius: 15px;
+    padding: 15px;
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    color: var(--color-texto);
+}
+
+.family-card:hover {
+    transform: scale(1.1);
+    background: #F0C834;
+}
+
+.family-emoji {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.family-result {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.family-score {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.card-title2 {
+  color: #255790;
+}
+
+.memory-card .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* o 'contain' si prefieres que se vea completa sin recortar */
+    border-radius: 10px; /* Para que coincida con el borde de la carta */
+}
+
+/* Estilos para la animación de volteo de la carta de memoria */
+.memory-card {
+    aspect-ratio: 1 / 1; /* Hace que la carta sea un cuadrado */
+    perspective: 1000px; /* Efecto 3D */
+    background-color: transparent;
+    border: none;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.memory-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid var(--color-suave);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-front {
+    background-color: var(--color-claro);
+}
+
+.card-back {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    /* font-size: 4.5rem;  Quitamos el tamaño de fuente general */
+    transform: rotateY(180deg);
+    flex-direction: column; /* Para apilar el emoji y el texto */
+    padding: 5px; /* Pequeño padding interno */
+}
+
+/* Estilos para la imagen del reverso  */
+.memory-card .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que toda la imagen sea visible */
+    border-radius: 8px; /* Un poco menos que el borde para que se vea bien */
+}
+
+/* Estilos para la imagen del FRENTE de la carta (la que se revela) */
+.memory-card .card-back img {
+    width: 90%; /* Un poco más pequeña que la carta para que se vea el fondo */
+    height: 90%;
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    border-radius: 8px;
+}
+
+/* Estilos para alinear los botones en las tarjetas de juego */
+.game-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card .btn {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+}
+
+
+/* Estilos para el emoji dentro de la carta */
+.card-emoji {
+    font-size: 4.5rem; /* Aumentamos el tamaño del emoji */
+    line-height: 1; /* Ajuste de altura de línea */
+}
+
+/* Estilos para el texto debajo del emoji */
+.memory-card-text {
+  color: #3057a4;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 5px; /* Espacio entre el emoji y el texto */
+}
+
+/* Animación para el trofeo de victoria */
+.trophy-animation {
+    font-size: 6rem; /* Hacemos el trofeo grande */
+    animation: trophy-pop 0.8s ease-out forwards;
+    transform: scale(0); /* Empieza invisible y escalado a 0 */
+}
+
+@keyframes trophy-pop {
+    0% {
+        transform: scale(0) rotate(-30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2) rotate(10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.aviso-memoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Clase para centrar el contenido del tablero de memoria cuando el juego termina */
+.memory-board.game-ended {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho disponible para centrar mejor */
+}
+
+/* Contenedor para el feedback final de los juegos */
+.feedback-container {
+    background-color: var(--color-claro);
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    animation: feedback-pop 0.5s ease-out;
+    position: relative; /* Necesario para que el .rain-animation funcione dentro */
+    min-height: 300px; /* Asegura que tenga altura para el efecto */
+    display: flex; /* Añadido para centrar contenido */
+    flex-direction: column; /* Añadido */
+    justify-content: center; /* Añadido */
+    align-items: center; /* Añadido */
+}
+
+/* Animación para el contenedor de feedback */
+@keyframes feedback-pop {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Estilos para los íconos de la pantalla "casi lo tienes" */
+.puzzle-pieces {
+    margin-bottom: 1rem;
+}
+
+.puzzle-piece {
+    font-size: 4rem;
+    display: inline-block;
+    
+}
+
+@keyframes puzzle-pieces-animation {
+    0%, 100% { transform: translateY(0) rotate(0deg) translateX(0); }
+    25% { transform: translateY(-10px) rotate(-15deg) translateX(20px); }
+    50% { transform: translateY(0) rotate(0deg) translateX(0); }
+    75% { transform: translateY(-10px) rotate(15deg) translateX(-20px); }
+}
+
+/* --- ESTILOS ANTIGUOS ELIMINADOS --- */
+/* Se eliminaron .rain-animation, .sad-face y sus animaciones relacionadas */
+
+/* Animación para el ícono de play en la página de juegos */
+.play-icon-animation {
+    font-size: 2rem;
+    display: inline-block;
+    animation: wiggle 1.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+}
+
+
+.creative-icons {
+    font-size: 2.5rem;
+}
+
+.creative-icons .icon-bounce {
+    display: inline-block;
+    animation: bounce-up 2s infinite ease-in-out;
+}
+
+@keyframes bounce-up {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilos para Simon Dice */
+#simon-game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 310px;
+}
+
+.simon-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.simon-btn:active {
+  opacity: 1;
+}
+
+#green { background: #28a745; }
+#red { background: #dc3545; }
+#yellow { background: #ffc107; }
+#blue { background: #0d6efd; }

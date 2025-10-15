@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentos - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <link rel="icon" href="../img/isologo off.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="../img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../estudiantes.html">Estudiantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../progresos.html">Progresos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-5">
+        <section class="stories-intro py-5 bg-light text-center">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-4">
+                        <li class="breadcrumb-item"><a href="../estudiantes.html">Estudiantes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cuentos</li>
+                    </ol>
+                </nav>
+                <h1 class="mb-4">Cuentos Interactivos</h1>
+                <p class="lead">Libros digitales con narración, karaoke y animaciones</p>
+            </div>
+        </section>
+
+        <section class="stories-list py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card story-card h-100">
+                            <img src="../img/story1.jpg" class="card-img-top" alt="El Gato y el Sombrero" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">El Gato y el Sombrero</h5>
+                                <p class="card-text">Una aventura mágica con un gato travieso.</p>
+                                <button class="btn btn-primary read-story" data-story="1">Leer Cuento</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card story-card h-100">
+                            <img src="../img/story2.jpg" class="card-img-top" alt="Los Colores del Arcoíris" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">Los Colores del Arcoíris</h5>
+                                <p class="card-text">Descubre los colores a través de una historia colorida.</p>
+                                <button class="btn btn-primary read-story" data-story="2">Leer Cuento</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card story-card h-100">
+                            <img src="../img/story3.jpg" class="card-img-top" alt="El Pez Dorado" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">El Pez Dorado</h5>
+                                <p class="card-text">Una historia submarina llena de amigos.</p>
+                                <button class="btn btn-primary read-story" data-story="3">Leer Cuento</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-reader d-none py-5" id="storyReader">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="story-container">
+                            <div class="story-controls text-center mb-4">
+                                <button class="btn btn-secondary me-2" id="prevPage" disabled>Anterior</button>
+                                <span id="currentPage">1</span> / <span id="totalPages">10</span>
+                                <button class="btn btn-secondary ms-2" id="nextPage">Siguiente</button>
+                                <div class="mt-3">
+                                    <button class="btn btn-outline-primary me-2" id="playAudio">Reproducir Audio</button>
+                                    <button class="btn btn-outline-primary me-2" id="toggleLanguage">Español/Inglés</button>
+                                    <input type="range" id="audioSpeed" min="0.5" max="2" step="0.1" value="1">
+                                    <label for="audioSpeed" class="ms-2">Velocidad</label>
+                                </div>
+                            </div>
+                            <div class="story-content">
+                                <img id="storyImage" src="" alt="Página del cuento" class="img-fluid mb-3" loading="lazy">
+                                <div id="storyText" class="story-text">
+                                    <!-- Text with karaoke highlighting -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-secondary" id="closeStory">Cerrar Cuento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p style="font-size: 1.5rem;">
+                        <strong>
+                            “<span style="color: var(--color-claro);">Little</span>
+                            <span style="color: #CFF0E6;">minds,</span>
+                            <span style="color: var(--color-acento);">big</span>
+                            <span style="color: #A0B2E8;">fun</span>
+                            <span style="color: #FADAB4;">finds”</span></strong>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/stories.js"></script>
+</body>
+</html>

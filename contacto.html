@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/isologo off.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" id="main-nav">
+                        <!-- El script auth.js llenará esto dinámicamente -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content pt-5">
+        <section class="contact-info py-5 bg-light">
+            <div class="container">
+                <h1 class="text-center mb-5">Contáctanos</h1>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card text-center">
+                            <span class="contact-icon">📧</span>
+                            <h5>Correo Electrónico</h5>
+                            <a href="mailto:funglish.edu.co@gmail.com">Funglish.edu.co@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card text-center">
+                            <span class="contact-icon">📱</span>
+                            <h5>Teléfono</h5>
+                            <p>+57 3108090855</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card text-center">
+                            <span class="contact-icon">💬</span>
+                            <h5>WhatsApp</h5>
+                            <a href="https://wa.me/573108090855" class="btn btn-success" target="_blank" rel="noopener">Enviar Mensaje</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4 text-center">
+                        <h5>Redes Sociales</h5>
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" class="me-3" aria-label="TikTok"><i class="bi bi-tiktok"></i> Tik Tok</a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" class="me-3" aria-label="Twitter X"><i class="bi bi-twitter-x"></i> Twitter</a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" class="me-3" aria-label="Instagram"><i class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                    <div class="col-md-6 mb-4 text-center">
+                        <h5>Ubicación</h5>
+                        <p>Bogotá, Colombia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-forms py-5">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-4">
+                        <h2 class="mb-4">Envíanos un Mensaje</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="relation" class="form-label">Relación</label>
+                                <select class="form-select" id="relation">
+                                    <option value="padre">Padre/Madre</option>
+                                    <option value="docente">Docente</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Motivo</label>
+                                <select class="form-select" id="subject">
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="consulta">Consulta General</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                                <label class="form-check-label" for="privacyCheck">
+                                    Acepto la <a href="#" target="_blank">Política de Privacidad</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p style="font-size: 1.5rem;">
+                        <strong>
+                            “<span style="color: var(--color-claro);">Little</span>
+                            <span style="color: #CFF0E6;">minds,</span>
+                            <span style="color: var(--color-acento);">big</span>
+                            <span style="color: #A0B2E8;">fun</span>
+                            <span style="color: #FADAB4;">finds”</span></strong>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+           <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

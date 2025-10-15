@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/isologo off.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" id="main-nav">
+                        <!-- El script auth.js llenará esto dinámicamente -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content pt-5">
+        <section class="age-selection py-5 text-center" id="ageSelection">
+            <div class="container">
+                <h1 style="color: #A8D8EA;" class="mb-4">Selecciona tu edad</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-age-wrapper btn-age" data-age="3" aria-label="Seleccionar edad 3 años">
+                            <div class="card h-100 age-card">
+                                <div class="card-body">
+                                    <img src="img/Número3.jpg" alt="3 años" class="mb-2" width="150" height="170">
+                                    
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-age-wrapper btn-age" data-age="4" aria-label="Seleccionar edad 4 años">
+                            <div class="card h-100 age-card">
+                                <div class="card-body">
+                                    <img src="img/Número 4.jpg" alt="4 años" class="mb-2" width="150" height="170">
+                                    
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-age-wrapper btn-age" data-age="5" aria-label="Seleccionar edad 5 años">
+                            <div class="card h-100 age-card">
+                                <div class="card-body">
+                                    <img src="img/Número5.jpg" alt="5 años" class="mb-2" width="150" height="170">
+                                    
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 style="color: #A8D8EA;" class="text-center my-4"> <i class="bi bi-award"></i> Knowledge is here for you.</h1>
+
+        <section class="activity-selection py-5 text-center d-none" id="activitySelection">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="#" id="backToAge">Seleccionar Edad</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Actividades</li>
+                    </ol>
+                </nav>
+                <h2 style="color: #255790;" class="mb-4">¿Qué quieres hacer hoy?</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <a href="juegos/index.html" class="card activity-card juegos h-100 text-decoration-none">
+                            <div class="card-body text-center">
+                                <span class="activity-icon">🎮</span>
+                                <h5 class="card-title2">Juegos</h5>
+                                <p class="card-text">Quizzes, memoria y drag & drop</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="#" class="card activity-card guias h-100 text-decoration-none">
+                            <div class="card-body text-center">
+                                <span class="activity-icon">📘</span>
+                                <h5 class="card-title2">Guías</h5>
+                                <p class="card-text">Material descargable para padres</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="cuentos/index.html" class="card activity-card cuentos h-100 text-decoration-none">
+                            <div class="card-body text-center">
+                                <span class="activity-icon">📖</span>
+                                <h5 class="card-title2">Cuentos</h5>
+                                <p class="card-text">Libros digitales interactivos</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="flashcards/index.html" class="card activity-card flashcards h-100 text-decoration-none">
+                            <div class="card-body text-center">
+                                <span class="activity-icon">🃏</span>
+                                <h5 class="card-title2">Flashcards</h5>
+                                <p class="card-text">Tarjetas interactivas de vocabulario</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3"> 
+                    <p style="font-size: 1.5rem;">
+                        <strong>
+                            “<span style="color: var(--color-claro);">Little</span>
+                            <span style="color: #CFF0E6;">minds,</span>
+                            <span style="color: var(--color-acento);">big</span>
+                            <span style="color: #A0B2E8;">fun</span>
+                            <span style="color: #FADAB4;">finds”</span>
+                        </strong>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <!-- Este h5 estaba vacío, se puede eliminar o rellenar si se necesita un título aquí -->
+                    <!-- <h5>Enlaces Útiles</h5> -->
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

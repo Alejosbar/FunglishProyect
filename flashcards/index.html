@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - FUNGLISH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/isologo off.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Ir a inicio FUNGLISH">
+                    <img src="../img/isologo off.jpg" alt="Logo FUNGLISH" class="logo me-2" width="50" height="50">
+                    <span class="brand-text">FUNGLISH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../estudiantes.html">Estudiantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../progresos.html">Progresos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-5">
+        <section class="flashcards-intro py-5 bg-light text-center">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-4">
+                        <li class="breadcrumb-item"><a href="../estudiantes.html">Estudiantes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Flashcards</li>
+                    </ol>
+                </nav>
+                <h1 class="mb-4">Flashcards Interactivas</h1>
+                <p class="lead">Aprende vocabulario con tarjetas que incluyen imagen, palabra y audio</p>
+            </div>
+        </section>
+
+        <section class="flashcards-modes py-5">
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-mode btn-lg w-100" id="exploreMode">
+                            <img src="" alt="" width="32" height="32" class="me-2">
+                            <span>Exploración Libre</span>
+                        </button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-mode btn-lg w-100" id="matchingMode">
+                            <img src="" alt="" width="32" height="32" class="me-2">
+                            <span>Juego de Asociación</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Mode -->
+        <section class="explore-mode d-none py-5" id="exploreSection">
+            <div class="container">
+                <h2 class="text-center mb-4">Exploración Libre</h2>
+                <div class="flashcard-container text-center">
+                    <div class="flashcard" id="exploreCard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <img id="exploreImage" src="" alt="Imagen de la flashcard" class="img-fluid mb-3" loading="lazy">
+                                <h3 id="exploreWord">Word</h3>
+                                <button class="btn btn-primary mt-3" id="exploreAudio">🔊 Escuchar</button>
+                            </div>
+                            <div class="flashcard-back">
+                                <h3 id="exploreTranslation">Traducción</h3>
+                                <button class="btn btn-secondary mt-3" id="exploreShowTranslation">Mostrar Traducción</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-secondary me-2" id="prevCard">Anterior</button>
+                        <button class="btn btn-secondary" id="nextCard">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matching Mode -->
+        <section class="matching-mode d-none py-5" id="matchingSection">
+            <div class="container">
+                <h2 class="text-center mb-4">Juego de Asociación</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Palabras:</h5>
+                        <div id="wordList" class="word-list">
+                            <!-- Words will be populated by JS -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Imágenes:</h5>
+                        <div id="imageList" class="image-list">
+                            <!-- Images will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p>Puntuación: <span id="matchingScore">0</span></p>
+                    <button class="btn btn-secondary" id="resetMatching">Reiniciar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Recognition Section (Optional) -->
+        <section class="voice-mode d-none py-5 bg-light" id="voiceSection">
+            <div class="container text-center">
+                <h2 class="mb-4">Práctica de Pronunciación</h2>
+                <div class="voice-card">
+                    <img id="voiceImage" src="" alt="Imagen para pronunciar" class="img-fluid mb-3" loading="lazy">
+                    <h3 id="voiceWord">Word</h3>
+                    <button class="btn btn-primary mb-3" id="voiceAudio">🔊 Escuchar Modelo</button>
+                    <button class="btn btn-success mb-3" id="startVoice">🎤 Hablar</button>
+                    <div id="voiceFeedback"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p style="font-size: 1.5rem;">
+                        <strong>
+                            “<span style="color: var(--color-claro);">Little</span>
+                            <span style="color: #CFF0E6;">minds,</span>
+                            <span style="color: var(--color-acento);">big</span>
+                            <span style="color: #A0B2E8;">fun</span>
+                            <span style="color: #FADAB4;">finds”</span></strong>
+                    </p>
+                </div>
+                <div  class="col-md-4 mb-3 py-5">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div class="footer-social-icons">
+                        <a href="https://www.tiktok.com/@funglish_edu?_t=ZS-901Xme0soMc&_r=1" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/Funglish_edu?t=b0_HTulqEncVuxSZj8YKxw&s=09" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/funglish_edu/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&copy; <strong> 2025 FUNGLISH. Todos los derechos reservados.</strong> </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
